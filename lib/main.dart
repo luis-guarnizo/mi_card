@@ -10,15 +10,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Scaffold(
         backgroundColor: Colors.blue,
-        body: Container(
-          
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              width: 100,
+              height: 100,
+              margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+              padding: const EdgeInsets.all(10.0),
+              color: Colors.white,
+              child: const Text('Hello'),
+            ),
+          ),
         ),
       ),
     );
